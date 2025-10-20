@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+    themes: forest, light, dark, coffee, abyss, night;
+}
+
+.sky-theme {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--color-sky-dark), var(--color-sky-black));
+  overflow: hidden;
+}
+
+.sky-theme::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow: 
+    50px 80px white,
+    120px 200px white,
+    300px 150px white,
+    600px 400px white,
+    900px 250px white,
+    1100px 500px white,
+    700px 600px white,
+    400px 700px white,
+    950px 550px white;
+  z-index: 0;
+}
+
+.sky-theme .shooting-star {
+  position: absolute;
+  top: -100px;
+  width: 3px;
+  height: 100px;
+  background: linear-gradient(-45deg, white, transparent);
+  opacity: 0;
+  animation: shooting 4s linear infinite;
+  z-index: 0;
+}
+
+.sky-theme .shooting-star:nth-child(1) { left: 90%; animation-delay: 0s; }
+.sky-theme .shooting-star:nth-child(2) { left: 75%; animation-delay: 2s; }
+.sky-theme .shooting-star:nth-child(3) { left: 60%; animation-delay: 4s; }
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0) translateY(0) rotate(45deg);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  100% {
+    transform: translateX(-1200px) translateY(800px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@theme {
+  --color-sky-dark: #0a0f29;
+  --color-sky-black: #000;
+}
