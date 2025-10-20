@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="w-full fixed top-0 left-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-md">
       <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3 text-white">
         <Link
-          to="/"
+          to="/hero"
           className="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-400 via-cyan-400 to-green-300 bg-clip-text text-transparent hover:opacity-90 transition-opacity"
         >
           Jace<span className="text-blue-500">.stack</span>
