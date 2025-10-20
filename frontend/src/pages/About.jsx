@@ -39,7 +39,7 @@ const About = () => {
           About Me
         </h3>
 
-        <div className="border p-8 rounded-lg border-white/10 hover:border-white/20 hover:-translate-y-1 transition-all mb-6">
+        <div className="border p-8 rounded-lg border-blue-500/20 hover:border-blue-500/30 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(5,130,246,0.4)] transition-all mb-6">
           <p className="text-gray-400 leading-relaxed mb-6 text-xl">
             I’m a passionate <span className="text-blue-400 font-semibold">Software Engineer</span>{" "}
             with a deep interest in modern web development, cloud infrastructure, and DevOps automation. 
@@ -65,7 +65,7 @@ const About = () => {
             </div>
 
             <div>
-              <div className="flex flex-wrap gap-2">
+              <div className="">
                 <div className="text-white">
                   <h4 className="text-xl font-bold mb-2 pb-3 border-b border-green-500/30">Backend</h4>
                 </div>
@@ -86,7 +86,7 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="rounded-xl text-white border border-white/10 hover:-translate-y-1 transition-all p-6">
+          <div className="rounded-xl text-white border border-blue-500/20 hover:border-blue-500/30 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(5,130,246,0.4)] transition-all p-6">
             <h3 className="text-xl font-bold mb-2">🎓 Education</h3>
             <ul className="list-disc list-inside text-gray-300 space-y-3">
               <li>
@@ -99,7 +99,7 @@ const About = () => {
             </ul>
           </div>
 
-          <div className="border border-white/10 text-white rounded-xl hover:-translate-y-1 transition-all p-6">
+          <div className="border border-blue-500/20 text-white rounded-xl hover:border-blue-500/30 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(5,130,246,0.4)] transition-all p-6">
             <h3 className="font-bold text-xl mb-2">💼 Work Experience</h3>
 
             <div className="space-y-4 text-gray-300">

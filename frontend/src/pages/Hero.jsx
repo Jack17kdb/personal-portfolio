@@ -27,6 +27,10 @@ const Hero = () => {
       <section id='about' className='py-20'>
         <About />
       </section>
+
+      <section id='projects' className='py-20'>
+        <Projects />
+      </section>
     </>
   )
 }

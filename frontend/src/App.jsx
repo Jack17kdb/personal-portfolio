@@ -9,7 +9,6 @@ import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
@@ -26,7 +25,7 @@ function App() {
         </div>
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
