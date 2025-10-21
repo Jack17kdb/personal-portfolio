@@ -56,21 +56,25 @@ const Projects = () => {
       title: "Chat App",
       desc: "A real-time chat app built using React, Node.js, and Socket.io with JWT authentication and Cloudinary media support.",
       tech: chatAppSkills,
+      link: "https://github.com/Jack17kdb/chat-app-project",
     },
     {
       title: "Inventory Management System",
       desc: "A modern inventory system built with Next.js, Tailwind, Prisma, and BetterAuth — featuring JWT, TypeScript, and Cloudinary integration.",
       tech: inventorySkills,
+      link: "https://github.com/Jack17kdb/inventory-management-website",
     },
     {
       title: "Movie App",
       desc: "A dynamic movie search and listing app built using React, Tailwind, and Axios for API requests.",
       tech: movieAppSkills,
+      link: "https://github.com/Jack17kdb/movie-app",
     },
     {
       title: "News App",
       desc: "A news aggregator app built using React, Tailwind, and Axios for API requests.",
       tech: newsAppSkills,
+      link: "https://github.com/Jack17kdb/news-app",
     },
   ];
 
@@ -108,10 +112,10 @@ const Projects = () => {
               </div>
 
               <a
-                href="#"
+                href={proj.link}
                 className="flex text-blue-500 hover:text-blue-600 items-center gap-1"
               >
-                View project <FaArrowRight />
+                View project →
               </a>
             </div>
           ))}

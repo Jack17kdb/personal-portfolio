@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import "./index.css";
 import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
@@ -6,25 +7,69 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
-import LandingAnimation from "./pages/LandingAnimation";
+import PageTransition from "./components/PageTransition";
 import Home from "./pages/Home";
 
 function App() {
+  const location = useLocation();
+
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-        <div className="bg-gradient-to-br from-black via-gray-900 to-gray-950">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/hero" element={<Hero />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/contact" element={<Contact />} />
+      <Navbar />
+      <div className="bg-gradient-to-br from-black via-gray-900 to-gray-950 transition-opacity duration-700">
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route
+              path="/"
+              element={
+                <PageTransition>
+                  <Home />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/home"
+              element={
+                <PageTransition>
+                  <Hero />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <PageTransition>
+                  <About />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/projects"
+              element={
+                <PageTransition>
+                  <Projects />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/skills"
+              element={
+                <PageTransition>
+                  <Skills />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/contact"
+              element={
+                <PageTransition>
+                  <Contact />
+                </PageTransition>
+              }
+            />
           </Routes>
-        </div>
-      </BrowserRouter>
+        </AnimatePresence>
+      </div>
     </>
   );
 }

@@ -1,32 +1,42 @@
 import React from "react";
 import { FaReact, FaDocker, FaAws, FaPython, FaNodeJs } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiKubernetes, SiTerraform, SiMongodb, SiMysql, SiFlask, SiFastapi, SiPhp } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiKubernetes,
+  SiTerraform,
+  SiMongodb,
+  SiMysql,
+  SiFlask,
+  SiFastapi,
+  SiPhp,
+} from "react-icons/si";
 
 const About = () => {
   const frontedSkills = [
-      { name: "React", icon: <FaReact /> },
-      { name: "Next.js", icon: <SiNextdotjs /> },
-      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-      { name: "Docker", icon: <FaDocker /> },
-      { name: "Kubernetes", icon: <SiKubernetes /> },
-      { name: "Terraform", icon: <SiTerraform /> },
-      { name: "AWS", icon: <FaAws /> },
-      { name: "Git", icon: "🐙" },
-      { name: "GitHub", icon: "💻" },
-      { name: "Linux", icon: "🐧" },
-    ];
+    { name: "React", icon: <FaReact /> },
+    { name: "Next.js", icon: <SiNextdotjs /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+    { name: "Docker", icon: <FaDocker /> },
+    { name: "Kubernetes", icon: <SiKubernetes /> },
+    { name: "Terraform", icon: <SiTerraform /> },
+    { name: "AWS", icon: <FaAws /> },
+    { name: "Git", icon: "🐙" },
+    { name: "GitHub", icon: "💻" },
+    { name: "Linux", icon: "🐧" },
+  ];
 
   const backendSkills = [
-      { name: "Node.js", icon: <FaNodeJs /> },
-      { name: "Express.js", icon: "⚙️" },
-      { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "MySQL", icon: <SiMysql /> },
-      { name: "Zustand", icon: "🧠" },
-      { name: "Python", icon: <FaPython /> },
-      { name: "Flask", icon: <SiFlask /> },
-      { name: "FastAPI", icon: <SiFastapi /> },
-      { name: "PHP", icon: <SiPhp /> },
-    ];
+    { name: "Node.js", icon: <FaNodeJs /> },
+    { name: "Express.js", icon: "⚙️" },
+    { name: "MongoDB", icon: <SiMongodb /> },
+    { name: "MySQL", icon: <SiMysql /> },
+    { name: "Zustand", icon: "🧠" },
+    { name: "Python", icon: <FaPython /> },
+    { name: "Flask", icon: <SiFlask /> },
+    { name: "FastAPI", icon: <SiFastapi /> },
+    { name: "PHP", icon: <SiPhp /> },
+  ];
 
   return (
     <section
@@ -41,15 +51,21 @@ const About = () => {
 
         <div className="border p-8 rounded-lg border-blue-500/20 hover:border-blue-500/30 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(5,130,246,0.4)] transition-all mb-6">
           <p className="text-gray-400 leading-relaxed mb-6 text-xl">
-            I’m a passionate <span className="text-blue-400 font-semibold">Software Engineer</span>{" "}
-            with a deep interest in modern web development, cloud infrastructure, and DevOps automation. 
-            I love building systems that are scalable, fast, and elegant.
+            I’m a passionate{" "}
+            <span className="text-blue-400 font-semibold">
+              Software Engineer
+            </span>{" "}
+            with a deep interest in modern web development, cloud
+            infrastructure, and DevOps automation. I love building systems that
+            are scalable, fast, and elegant.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <div className="text-white">
-                <h4 className="text-xl font-bold mb-2 border-b border-blue-500/30 pb-3">Frontend</h4>
+                <h4 className="text-xl font-bold mb-2 border-b border-blue-500/30 pb-3">
+                  Frontend
+                </h4>
               </div>
               <div className="flex flex-wrap gap-2">
                 {frontedSkills.map((skill, key) => (
@@ -67,7 +83,9 @@ const About = () => {
             <div>
               <div className="">
                 <div className="text-white">
-                  <h4 className="text-xl font-bold mb-2 pb-3 border-b border-green-500/30">Backend</h4>
+                  <h4 className="text-xl font-bold mb-2 pb-3 border-b border-green-500/30">
+                    Backend
+                  </h4>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -108,7 +126,8 @@ const About = () => {
                   Full Stack Developer (2024-2025)
                 </h4>
                 <p>
-                  Developed and deployed full-stack web apps using React, Next.js, and Node.js.
+                  Developed and deployed full-stack web apps using React,
+                  Next.js, and Node.js.
                 </p>
               </div>
 
@@ -117,7 +136,8 @@ const About = () => {
                   Attachment DevOps Engineer (2025)
                 </h4>
                 <p>
-                  Automated CI/CD pipelines and infrastructure deployments using Docker, Kubernetes, and Terraform.
+                  Automated CI/CD pipelines and infrastructure deployments using
+                  Docker, Kubernetes, and Terraform.
                 </p>
               </div>
             </div>
