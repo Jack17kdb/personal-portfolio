@@ -5,32 +5,32 @@ const Skills = () => {
   const skills = [
     {
       name: "How the Web Works",
-      photo: "/howthewebworks.svg",
+      photo: "howthewebworks.svg",
       desc: "Completed the 'How The Web Works' module",
     },
     {
       name: "SQL Injection",
-      photo: "/injection.svg",
+      photo: "injection.svg",
       desc: "Conquered Advanced SQL Injection challenges",
     },
     {
       name: "Investigations",
-      photo: "/investigations_badge.svg",
+      photo: "investigations_badge.svg",
       desc: "Completed the Cyber Defense Investigation series",
     },
     {
       name: "King of the Hill",
-      photo: "/king.svg",
+      photo: "king.svg",
       desc: "Crowned King of the Hill winner",
     },
     {
       name: "Security Awareness",
-      photo: "/securityawareness.svg",
+      photo: "securityawareness.svg",
       desc: "Completed the Cyber Security Awareness module",
     },
     {
       name: "Streak",
-      photo: "/streak90.svg",
+      photo: "streak90.svg",
       desc: "Hacked for 90 days in a row — unstoppable dedication!",
     },
   ];
