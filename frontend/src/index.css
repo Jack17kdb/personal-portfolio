@@ -3,6 +3,30 @@
     themes: forest, light, dark, coffee, abyss, night;
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Sky theme with stars */
 .sky-theme {
   position: relative;
   width: 100%;
@@ -28,7 +52,10 @@
     1100px 500px white,
     700px 600px white,
     400px 700px white,
-    950px 550px white;
+    950px 550px white,
+    200px 300px white,
+    800px 150px white,
+    1200px 400px white;
   z-index: 0;
 }
 
@@ -59,7 +86,57 @@
   }
 }
 
+/* Pulse animation for decorative elements */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.glow-strong {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #06b6d4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2563eb, #0891b2);
+}
+
 @theme {
   --color-sky-dark: #0a0f29;
   --color-sky-black: #000;
+}
+
+/* Responsive breakpoint for xs screens */
+@media (min-width: 475px) {
+  .xs\:inline {
+    display: inline;
+  }
 }
