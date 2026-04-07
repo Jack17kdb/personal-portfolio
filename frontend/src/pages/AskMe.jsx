@@ -5,13 +5,9 @@ import { FiSend, FiUser, FiCpu, FiZap } from "react-icons/fi";
 const RAG_URL = import.meta.env.VITE_RAG_API_URL || "http://localhost:8000";
 
 const SUGGESTIONS = [
-  "What projects has Johnson built?",
+  "What full-stack projects has he made?",
   "What are his AI and ML skills?",
   "Tell me about his cybersecurity experience",
-  "What DevOps tools does he know?",
-  "What is purple teaming?",
-  "What full-stack projects has he made?",
-  "Where did he study?",
   "How can I contact Johnson?",
 ];
 
@@ -77,8 +73,7 @@ const AskMe = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 px-4">
-      <div className="max-w-3xl mx-auto w-full flex flex-col" style={{ height: "80vh" }}>
-
+      <div className="max-w-5xl mx-auto w-full flex flex-col" style={{ height: "90vh" }}>
         <div className="text-center mb-6">
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 animate-gradient mb-2">
             Ask Me Anything
@@ -108,7 +103,7 @@ const AskMe = () => {
               <div className={"shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm " + (msg.role === "user" ? "bg-gradient-to-br from-blue-500 to-cyan-500" : "bg-gradient-to-br from-purple-600 to-pink-600")}>
                 {msg.role === "user" ? <FiUser /> : <FiCpu />}
               </div>
-              <div className={"max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap " + (msg.role === "user" ? "bg-gradient-to-br from-blue-600/30 to-cyan-600/20 border border-blue-500/30 text-white rounded-tr-sm" : msg.isError ? "bg-red-900/20 border border-red-500/30 text-red-300 rounded-tl-sm" : "bg-white/5 border border-white/10 text-gray-200 rounded-tl-sm")}>
+              <div className={"max-w-[80%] rounded-2xl px-4 py-3 text-base leading-relaxed whitespace-pre-wrap " + (msg.role === "user" ? "bg-gradient-to-br from-blue-600/30 to-cyan-600/20 border border-blue-500/30 text-white rounded-tr-sm" : msg.isError ? "bg-red-900/20 border border-red-500/30 text-red-300 rounded-tl-sm" : "bg-white/5 border border-white/10 text-gray-200 rounded-tl-sm")}>
                 {msg.text}
               </div>
             </div>
@@ -141,7 +136,10 @@ const AskMe = () => {
             <FiSend className="text-base" />
           </button>
         </div>
-        <p className="text-center text-gray-600 text-xs mt-2">Press Enter to send · Shift+Enter for new line</p>
+
+        <p className="text-center text-gray-600 text-xs mt-2">
+          Press Enter to send · Shift+Enter for new line
+        </p>
       </div>
     </section>
   );
