@@ -9,6 +9,7 @@ import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import PageTransition from "./components/PageTransition";
 import Home from "./pages/Home";
+import AskMe from "./pages/AskMe";
 
 function App() {
   const location = useLocation();
@@ -64,6 +65,14 @@ function App() {
               element={
                 <PageTransition>
                   <Contact />
+                </PageTransition>
+              }
+            />
+                      <Route
+              path="/ask"
+              element={
+                <PageTransition>
+                  <AskMe />
                 </PageTransition>
               }
             />
