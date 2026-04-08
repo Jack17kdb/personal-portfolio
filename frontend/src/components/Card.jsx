@@ -5,7 +5,7 @@ const Card = ({ skill }) => {
     <div className="group border border-blue-500/30 hover:border-blue-500/60 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(5,130,246,0.5)] transition-all duration-300 rounded-xl overflow-hidden bg-gradient-to-br from-blue-500/10 to-purple-500/5 backdrop-blur-sm">
       <div className="relative overflow-hidden">
         <img
-          src={`/personal-portfolio/${skill.photo}`}
+          src={`/${skill.photo}`}
           alt={skill.name}
           className="w-full h-40 sm:h-48 md:h-52 object-contain bg-gradient-to-b from-gray-900 via-gray-800 to-gray-950 p-4 sm:p-6 transition-transform duration-500 group-hover:scale-110"
         />
